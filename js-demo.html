@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD SECTION-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale: 1.0"
+        />
+        <title>JS DEMO</title>
+        <!--Embed Bootstrap framework here-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <!--Embed CSS-->
+        <link rel="stylesheet" href="style.css" />
+        <!--Font awesome-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        />
+    </head>
+
+    <!--BODY SECTION-->
+    <body>
+        <!--Navbar-->
+        <header>
+            <div class="header-box">
+                <div class="logo-box mx-1">
+                    <img
+                        style="height: 50px; width: 50px"
+                        src="Images/global.png "
+                        alt="Logo"
+                    />
+                </div>
+
+                <div class="title-box">
+                    <span class="fw-bold">ITWD6.408</span>
+                </div>
+
+                <div class="nav-box">
+                    <div class="horizontal-nav">
+                        <a href="index.html">HOME</a>
+                        <a href="form.html">FORMS</a>
+                        <a href="xml-rss.html">XML/RSS</a>
+                        <a href="js-demo.html" class="active">JAVASCRIPT</a>
+                        <a href="my-research.html">RESEARCH</a>
+                    </div>
+                </div>
+
+                <div class="search-button">
+                    <span class="search-icon fs-3">🔍︎</span>
+                </div>
+
+                <div class="hamburger-menu">
+                    <span class="fs-1" onclick="toggleNav();">≡</span>
+                </div>
+            </div>
+
+            <!-----------------------Curtain Menu: collapsed at page load--------------------->
+            <nav id="curtain-nav">
+                <div class="curtain-nav-content">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="form.html">FORMS</a></li>
+                        <li>
+                            <a href="xml-rss.html">XML/RSS</a>
+                        </li>
+                        <li>
+                            <a href="js-demo.html" class="active">JAVASCRIPT</a>
+                        </li>
+                        <li><a href="my-research.html">RESEARCH</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!--BUTTONS AND DEMO 1- 4-->
+            <div class="row bg-white m-0 p-0">
+                <!--Column 1-->
+                <div class="col-12 col-md-3">
+                    <!--Button-->
+                    <div class="row">
+                        <!--Button 1-->
+                        <button
+                            class="col-6 col-md-12 rounded-0 btn collapsed mb-1"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample1"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample1"
+                            id="button1"
+                        >
+                            <b>DEMO 1</b>
+                        </button>
+                        <!--Button 2-->
+                        <button
+                            class="col-6 col-md-12 rounded-0 btn collapsed mb-1"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample2"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample2"
+                            id="button2"
+                        >
+                            <b>DEMO 2</b>
+                        </button>
+                        <!--Button 3-->
+                        <button
+                            class="col-6 col-md-12 rounded-0 btn collapsed mb-1"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample3"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample3"
+                            id="button3"
+                        >
+                            <b>DEMO 3</b>
+                        </button>
+                        <!--Button 4-->
+                        <button
+                            class="col-6 col-md-12 rounded-0 btn collapsed mb-1"
+                            role="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample4"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample4"
+                            id="button4"
+                        >
+                            <b>DEMO 4</b>
+                        </button>
+                    </div>
+                </div>
+
+                <!--second column-->
+                <div class="col-12 col-md-9">
+                    <div class="row" style="min-height: 86vh">
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample1"
+                            >
+                                <div class="card card-body border-0">
+                                    <!--Demo 1-->
+                                    <div
+                                        class="row d-md-flex justify-content-evenly"
+                                    >
+                                        <!--Manual slideshow-->
+                                        <div
+                                            class="col-12 col-lg-5 mb-3"
+                                            style="
+                                                background-color: #fdf1cd;
+                                                border: solid 3px #ceb565;
+                                            "
+                                        >
+                                            <h3 class="p-2">
+                                                Manual slideshow
+                                            </h3>
+                                            <!-- Slideshow container -->
+                                            <div
+                                                class="slideshow-container p-2"
+                                            >
+                                                <!--Slide 1-->
+                                                <div class="slide">
+                                                    <!--Product title-->
+                                                    <p
+                                                        class="text-center fw-bold"
+                                                    >
+                                                        Samsung Galaxy Tab A8
+                                                    </p>
+                                                    <!--Product image-->
+                                                    <img
+                                                        src="Images/img1.jpg"
+                                                        alt="Slide 1"
+                                                        class="img-fluid"
+                                                    />
+                                                    <!--Product description-->
+                                                    <p class="text-center">
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing elit. Nulla
+                                                        et ante ligula. Sed
+                                                        mattis laoreet viverra.
+                                                        Integer in libero eros.
+                                                        Integer sit amet
+                                                        facilisis ligula. Cras
+                                                        ac tincidunt sem.
+                                                        Maecenas eget semper
+                                                        nulla. Nulla urna ipsum,
+                                                        gravida sit amet lorem
+                                                        eget, tincidunt
+                                                        malesuada ligula. Nam ut
+                                                        lobortis orci, vitae
+                                                        tempus tortor.
+                                                    </p>
+                                                </div>
+                                                <!--Slide 2-->
+                                                <div class="slide">
+                                                    <!--Product title-->
+                                                    <p
+                                                        class="text-center fw-bold"
+                                                    >
+                                                        Nokia T20
+                                                    </p>
+                                                    <!--Product image-->
+                                                    <img
+                                                        src="Images/img2.jpg"
+                                                        alt="Slide 2"
+                                                        class="img-fluid"
+                                                    />
+                                                    <!--Product description-->
+                                                    <p class="text-center">
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing elit. Nulla
+                                                        et ante ligula. Sed
+                                                        mattis laoreet viverra.
+                                                        Integer in libero eros.
+                                                        Integer sit amet
+                                                        facilisis ligula. Cras
+                                                        ac tincidunt sem.
+                                                        Maecenas eget semper
+                                                        nulla. Nulla urna ipsum,
+                                                        gravida sit amet lorem
+                                                        eget, tincidunt
+                                                        malesuada ligula. Nam ut
+                                                        lobortis orci, vitae
+                                                        tempus tortor.
+                                                    </p>
+                                                </div>
+                                                <!--Slide 3-->
+                                                <div class="slide">
+                                                    <!--Product title-->
+                                                    <p
+                                                        class="text-center fw-bold"
+                                                    >
+                                                        Lenovo P11 Plus
+                                                    </p>
+                                                    <!--Product image-->
+                                                    <img
+                                                        src="Images/img3.jpg"
+                                                        alt="Slide 3"
+                                                        class="img-fluid"
+                                                    />
+                                                    <!--Product description-->
+                                                    <p class="text-center">
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing elit. Nulla
+                                                        et ante ligula. Sed
+                                                        mattis laoreet viverra.
+                                                        Integer in libero eros.
+                                                        Integer sit amet
+                                                        facilisis ligula. Cras
+                                                        ac tincidunt sem.
+                                                        Maecenas eget semper
+                                                        nulla. Nulla urna ipsum,
+                                                        gravida sit amet lorem
+                                                        eget, tincidunt
+                                                        malesuada ligula. Nam ut
+                                                        lobortis orci, vitae
+                                                        tempus tortor.
+                                                    </p>
+                                                </div>
+                                                <a
+                                                    class="prev"
+                                                    onclick="prevSlide()"
+                                                    >&#10094;</a
+                                                >
+                                                <a
+                                                    class="next"
+                                                    onclick="nextSlide()"
+                                                    >&#10095;</a
+                                                >
+                                            </div>
+                                        </div>
+                                        <!--Automatic slieshow-->
+
+                                        <div
+                                            class="col-12 col-lg-5 mb-3"
+                                            style="
+                                                background-color: #fce6cd;
+                                                border: solid 3px #c69719;
+                                            "
+                                        >
+                                            <h3 class="p-2">
+                                                Automatic slideshow
+                                            </h3>
+                                            <!-- Slideshow container -->
+                                            <div
+                                                class="slideshow-container p-2"
+                                                style="
+                                                    background-color: #fce6cd;
+                                                "
+                                            >
+                                                <!--Slide 1-->
+                                                <div class="auto-slide">
+                                                    <!--Product title-->
+                                                    <p
+                                                        class="text-center fw-bold"
+                                                    >
+                                                        Samsung Galaxy Tab A8
+                                                    </p>
+                                                    <!--Product image-->
+                                                    <img
+                                                        src="Images/img1.jpg"
+                                                        alt="Slide 1"
+                                                        class="img-fluid"
+                                                    />
+                                                    <!--Product description-->
+                                                    <p class="text-center">
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing elit. Nulla
+                                                        et ante ligula. Sed
+                                                        mattis laoreet viverra.
+                                                        Integer in libero eros.
+                                                        Integer sit amet
+                                                        facilisis ligula. Cras
+                                                        ac tincidunt sem.
+                                                        Maecenas eget semper
+                                                        nulla. Nulla urna ipsum,
+                                                        gravida sit amet lorem
+                                                        eget, tincidunt
+                                                        malesuada ligula. Nam ut
+                                                        lobortis orci, vitae
+                                                        tempus tortor.
+                                                    </p>
+                                                </div>
+                                                <!--Slide 2-->
+                                                <div class="auto-slide">
+                                                    <!--Product title-->
+                                                    <p
+                                                        class="text-center fw-bold"
+                                                    >
+                                                        Nokia T20
+                                                    </p>
+                                                    <!--Product image-->
+                                                    <img
+                                                        src="Images/img2.jpg"
+                                                        alt="Slide 2"
+                                                        class="img-fluid"
+                                                    />
+                                                    <!--Product description-->
+                                                    <p class="text-center">
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing elit. Nulla
+                                                        et ante ligula. Sed
+                                                        mattis laoreet viverra.
+                                                        Integer in libero eros.
+                                                        Integer sit amet
+                                                        facilisis ligula. Cras
+                                                        ac tincidunt sem.
+                                                        Maecenas eget semper
+                                                        nulla. Nulla urna ipsum,
+                                                        gravida sit amet lorem
+                                                        eget, tincidunt
+                                                        malesuada ligula. Nam ut
+                                                        lobortis orci, vitae
+                                                        tempus tortor.
+                                                    </p>
+                                                </div>
+                                                <!--Slide 3-->
+                                                <div class="auto-slide">
+                                                    <!--Product title-->
+                                                    <p
+                                                        class="text-center fw-bold"
+                                                    >
+                                                        Lenovo P11 Plus
+                                                    </p>
+                                                    <!--Product image-->
+                                                    <img
+                                                        src="Images/img3.jpg"
+                                                        alt="Slide 3"
+                                                        class="img-fluid"
+                                                    />
+                                                    <!--Product description-->
+                                                    <p class="text-center">
+                                                        Lorem ipsum dolor sit
+                                                        amet, consectetur
+                                                        adipiscing elit. Nulla
+                                                        et ante ligula. Sed
+                                                        mattis laoreet viverra.
+                                                        Integer in libero eros.
+                                                        Integer sit amet
+                                                        facilisis ligula. Cras
+                                                        ac tincidunt sem.
+                                                        Maecenas eget semper
+                                                        nulla. Nulla urna ipsum,
+                                                        gravida sit amet lorem
+                                                        eget, tincidunt
+                                                        malesuada ligula. Nam ut
+                                                        lobortis orci, vitae
+                                                        tempus tortor.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample2"
+                            >
+                                <!--Demo page 2-->
+                                <div class="card card-body border-primary">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3 class="p-2">
+                                                Online shop: Add comment below a
+                                                specific product
+                                            </h3>
+                                            <div
+                                                style="border: solid 1px black"
+                                            >
+                                                <h5
+                                                    class="text-center p-2 mt-2"
+                                                >
+                                                    Apple iPad 9th Gen
+                                                </h5>
+
+                                                <img
+                                                    class="img-fluid mx-auto d-block"
+                                                    src="Images/ipad.jpg"
+                                                    alt="iPad"
+                                                />
+                                                <p class="p-1 m-1">
+                                                    Product description
+                                                </p>
+                                                <p class="p-1 m-1">
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipiscing elit.
+                                                    Nulla et ante ligula. Sed
+                                                    mattis laoreet viverra.
+                                                    Integer in libero eros.
+                                                    Integer sit amet facilisis
+                                                    ligula. Cras ac tincidunt
+                                                    sem. Maecenas eget semper
+                                                    nulla. Nulla urna ipsum,
+                                                    gravida sit amet lorem eget,
+                                                    tincidunt malesuada ligula.
+                                                    Nam ut lobortis orci, vitae
+                                                    tempus tortor.
+                                                </p>
+                                            </div>
+                                            <h6 class="fw-bold mt-3">
+                                                Comments:
+                                            </h6>
+
+                                            <!--Display comments here-->
+                                            <div
+                                                id="commentsSection"
+                                                class="mt-3"
+                                            >
+                                                <!-- Comments will be displayed here -->
+                                            </div>
+
+                                            <h6 class="fw-bold mt-3">
+                                                Add your comment:
+                                            </h6>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleFormControlInput1"
+                                                    class="form-label"
+                                                    >Name:</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="commentName"
+                                                    placeholder="Enter your name"
+                                                />
+                                            </div>
+                                            <br />
+
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleFormControlTextarea1"
+                                                    class="form-label"
+                                                    >Comment:</label
+                                                >
+                                                <textarea
+                                                    class="form-control"
+                                                    id="commentText"
+                                                    rows="3"
+                                                ></textarea>
+                                            </div>
+                                            <br />
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                                onclick="addComment()"
+                                            >
+                                                POST
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample3"
+                            >
+                                <div class="card card-body border-0">
+                                    <!--Demo page 3-->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3 class="p-2">
+                                                Online shop: Dropdown menu (HTML
+                                                “select” element) & “Add To
+                                                List” button.
+                                            </h3>
+                                            <span class="p-2"
+                                                >Select Item:</span
+                                            >
+                                            <div
+                                                class="dropdown"
+                                                style="display: inline-block"
+                                            >
+                                                <select
+                                                    id="itemSelect"
+                                                    class="form-select"
+                                                >
+                                                    <!-- Options will be populated here -->
+                                                </select>
+                                            </div>
+                                            <div id="itemInfo" class="mt-3">
+                                                <!-- Information of the selected item will be displayed here -->
+                                            </div>
+                                            <h6 class="p-2 fw-bold">
+                                                Add a New Item:
+                                            </h6>
+                                            <div class="mb-3 p-2">
+                                                <label
+                                                    for="itemTitle"
+                                                    class="form-label"
+                                                    >Title:</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="itemTitle"
+                                                />
+                                            </div>
+                                            <div class="mb-3 p-2">
+                                                <label
+                                                    for="itemPrice"
+                                                    class="form-label"
+                                                    >Price:</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="itemPrice"
+                                                />
+                                            </div>
+                                            <div class="mb-3 p-2">
+                                                <label
+                                                    for="itemImageUrl"
+                                                    class="form-label"
+                                                    >Image URL:</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="itemImageUrl"
+                                                />
+                                            </div>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary ms-2"
+                                                onclick="addItemToList()"
+                                            >
+                                                Add to List
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample4"
+                            >
+                                <div class="card card-body border-0">
+                                    <!--Demo page 4-->
+                                    <div class="row">
+                                        <h3 class="p-2">
+                                            Online shop: A Grid of 6 products
+                                            with “Add To Cart” button. Implement
+                                            Shopping Cart Function.
+                                        </h3>
+                                        <div
+                                            class="col-12 p-2"
+                                            style="background-color: #f3f1f1"
+                                        >
+                                            <h3 class="fw-bold">
+                                                SHOPPING CART - Click 🛒 to view
+                                                cart.
+                                            </h3>
+                                            <button
+                                                type="button"
+                                                class="btn btn-light btn-outline-dark mb-2"
+                                                onclick="toggleCartModal()"
+                                            >
+                                                🛒
+                                            </button>
+                                            <div
+                                                class="alert alert-success mt-2"
+                                                role="alert"
+                                                id="alertMessage"
+                                                style="display: none"
+                                            >
+                                                Item added to cart!
+                                            </div>
+
+                                            <!-- Shopping Cart Modal Content -->
+                                            <div
+                                                class="cart-modal"
+                                                style="display: none"
+                                            >
+                                                <div class="cart-content">
+                                                    <!-- Cart items will be dynamically added here -->
+                                                </div>
+                                                <div
+                                                    class="cart-total fw-bold m-2"
+                                                ></div>
+                                                <div class="d-flex">
+                                                    <button
+                                                        type="button"
+                                                        id="checkoutBtn"
+                                                        class="btn btn-primary m-2"
+                                                        style="display: none"
+                                                    >
+                                                        Checkout
+                                                    </button>
+                                                    <button
+                                                        style="display: none"
+                                                        id="clearBtn"
+                                                        type="button"
+                                                        class="btn btn-light btn-outline-danger m-2"
+                                                        onclick="clearCart()"
+                                                    >
+                                                        Clear Cart
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="row product-container mt-3"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--Footer-->
+        <div class="row m-0 p-0 footer">
+            <!--Column 1 Social media icons-->
+            <div class="col-12 col-md-4 p-2 d-md-flex align-items-center">
+                <div class="social-icons">
+                    <div class="footer-icons">
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-linkedin"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-youtube"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-facebook"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column 2- Copyright-->
+            <div
+                class="col-8 col-md-4 p-2 d-flex justify-content-end justify-content-md-center align-items-center"
+            >
+                <span class="fw-bold"> @2023 Created by Alex Scott </span>
+            </div>
+            <!--Column 3 - Privacy policy-->
+            <div
+                class="col-4 col-md-4 p-2 d-flex align-items-center justify-content-end"
+            >
+                <span class="" style="text-decoration: underline; color: blue">
+                    Privacy Policy
+                </span>
+            </div>
+        </div>
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-------------------------Embed JS file--------------------------->
+        <script type="text/javascript" src="JS/javascript.js"></script>
+        <script>
+            $("#multiCollapseExample1").addClass("show");
+            $("#button1").addClass("selected");
+            // Show only one page when a button is clicked, hide the inactive pages
+            $(document).ready(function () {
+                // Add event listeners to the buttons
+                $("#button1").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample1").addClass("show"); // Show Form 1
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $("#button2, #button3, #button4").removeClass(
+                            "selected"
+                        ); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                $("#button2").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample2").addClass("show"); // Show Form 2
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $("#button1, #button3, #button4").removeClass(
+                            "selected"
+                        ); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                $("#button3").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample3").addClass("show"); // Show Form 3
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $("#button1, #button2, #button4").removeClass(
+                            "selected"
+                        ); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                $("#button4").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample4").addClass("show"); // Show Form 4
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $("#button1, #button2, #button3").removeClass(
+                            "selected"
+                        ); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                // Function to hide all screens
+                function hideAllScreens() {
+                    $(".multi-collapse").removeClass("show");
+                }
+            });
+        </script>
+    </body>
+</html>
