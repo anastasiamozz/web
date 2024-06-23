@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD SECTION-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale: 1.0"
+        />
+        <title>HOMEPAGE</title>
+        <!--Embed Bootstrap framework here-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <!--Embed CSS-->
+        <link rel="stylesheet" href="style.css" />
+
+        <!--Font awesome-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        />
+    </head>
+
+    <!--BODY SECTION-->
+    <body>
+        <!--Navbar-->
+        <header>
+            <div class="header-box">
+                <div class="logo-box mx-1">
+                    <img
+                        style="height: 50px; width: 50px"
+                        src="Images/global.png "
+                        alt="Logo"
+                    />
+                </div>
+
+                <div class="title-box">
+                    <span class="fw-bold">ITWD6.408</span>
+                </div>
+
+                <div class="nav-box">
+                    <div class="horizontal-nav">
+                        <a
+                            href="index.html"
+                            class="active"
+                            id="horizontal-active"
+                            >HOME</a
+                        >
+                        <a href="form.html">FORMS</a>
+                        <a href="xml-rss.html">XML/RSS</a>
+                        <a href="js-demo.html">JAVASCRIPT</a>
+                        <a href="my-research.html">RESEARCH</a>
+                    </div>
+                </div>
+
+                <div class="search-button">
+                    <span class="search-icon fs-3">🔍︎</span>
+                </div>
+
+                <div class="hamburger-menu">
+                    <span class="fs-1" onclick="toggleNav();">≡</span>
+                </div>
+            </div>
+
+            <!-----------------------Curtain Menu: collapsed at page load--------------------->
+            <nav id="curtain-nav">
+                <div class="curtain-nav-content">
+                    <ul>
+                        <li><a href="index.html" class="active">HOME</a></li>
+                        <li><a href="form.html">FORMS</a></li>
+                        <li><a href="xml-json.html">XML/RSS</a></li>
+                        <li><a href="js-demo.html">JAVASCRIPT</a></li>
+                        <li><a href="my-research.html">RESEARCH</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!--row 1-->
+            <div class="col-12 px-0">
+                <div class="showcase">
+                    <div class="bg-image"></div>
+                    <div class="bg-text">
+                        <p class="h3">
+                            Advanced Internet and Web Learning Portfolio
+                        </p>
+                        <p class="h2">I am Alex Scott</p>
+                        <p class="h4">And I'm a Web Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Create a Bootstrap grid: 4 rows-->
+            <div class="container-fluid">
+                <!--Row 2-->
+                <div class="row bg-light">
+                    <!--Divide into 2 columns-->
+                    <!--column 1-->
+                    <div
+                        class="col-12 col-md-6"
+                        style="background-color: #dec914"
+                    >
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="p-2 fw-bold">BIO</h1>
+                            </div>
+                            <div
+                                class="col-12 col-md-3 d-flex align-items-center"
+                            >
+                                <img
+                                    style="
+                                        height: 300px;
+                                        width: 300px;
+                                        object-fit: contain;
+                                    "
+                                    class="img-fluid d-block mx-auto"
+                                    src="Images/portrait-icon.png"
+                                    alt="portrait-icon"
+                                />
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <p>
+                                    I'm Alex Scott, enrolled in the "Advanced
+                                    Internet and Web Page Development" course to
+                                    supercharge my web development skills. My
+                                    goal is to master various facets of web
+                                    development, from frontend technologies to
+                                    backend development, enabling me to create
+                                    captivating web experiences and contribute
+                                    to the ever-evolving digital landscape.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Column 2-->
+                    </div>
+                    <div
+                        class="col-12 col-md-6"
+                        style="
+                            background: rgb(226, 111, 109);
+                            background: linear-gradient(
+                                360deg,
+                                rgba(226, 111, 109, 1) 0%,
+                                rgba(255, 255, 255, 1) 100%
+                            );
+                        "
+                    >
+                        <h1 class="p-2 fw-bold">MY WEB TECHNOLOGIES</h1>
+                        <h2 class="p-2 text-primary">
+                            MY TOP WEB TECHNOLOGIES
+                        </h2>
+                        <ol class="text-primary">
+                            <li>Code Editor: VSCODE</li>
+                            <li>Hosting: GITHUB PAGES</li>
+                            <li>Browser: Chrome</li>
+                            <li>Frameworks: Bootstrap, ReactJS, JQuery</li>
+                            <li>Trio Web language: HTML, CSS, JS</li>
+                            <!-- Add more list items as needed -->
+                        </ol>
+                    </div>
+                </div>
+                <!--Row 3-->
+                <div class="row pb-4" style="background-color: #ceee8d">
+                    <!--Divide into 3 columns-->
+                    <!--Column 1-->
+                    <div class="col-12">
+                        <h1 class="p-2 fw-bold">
+                            MY WEB DEVELOPMENT COMPETENCES
+                        </h1>
+                    </div>
+                    <!--Column 2-->
+                    <div class="col-sm-12 col-md-4">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div>
+                                        <h2 class="">MARK UP (HTML)</h2>
+                                    </div>
+                                    <div>
+                                        <img
+                                            class="img-fluid flipbox-img"
+                                            src="Images/html5.png"
+                                            alt="HTML5 logo"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="flip-box-back">
+                                    <h2>COMPETENCE:</h2>
+                                    <div class="rating">
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star-half">&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Column 3-->
+                    <div class="col-sm-12 col-md-4">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div>
+                                        <h2 class="">STYLING (CSS)</h2>
+                                    </div>
+                                    <div>
+                                        <img
+                                            class="img-fluid flipbox-img"
+                                            src="Images/css3.png"
+                                            alt="css logo"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="flip-box-back">
+                                    <h2>COMPETENCE:</h2>
+                                    <div class="rating">
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star-empty">&#9734;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Column 4-->
+                    <div class="col-sm-12 col-md-4">
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <div>
+                                        <h2 class="">JAVASCRIPT</h2>
+                                    </div>
+                                    <div>
+                                        <img
+                                            class="img-fluid flipbox-img"
+                                            src="Images/javascript.png"
+                                            alt="javascript logo"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="flip-box-back">
+                                    <h2>COMPETENCE:</h2>
+                                    <div class="rating">
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star">&#9733;</span>
+                                        <span class="star-empty">&#9734;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Row 4-->
+                <div class="row" style="background-color: #ef6700">
+                    <!--Have only 1 column-->
+                    <div class="col-12">
+                        <h1 class="p-2 fw-bold">STATEMENT OF AUTHENTICITY</h1>
+                        <p class="offset-1">
+                            I confirm that:<br />
+                            This is an original assessment and is entirely my
+                            own work.<br />
+                            It contains no material previously published or
+                            written by another person or myself except where due
+                            acknowledgement is made in the text.<br />
+                            No material which to a substantial extent, has been
+                            submitted for any other academic course, is included
+                            without acknowledgement.<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--Footer-->
+        <div class="row m-0 p-0 footer">
+            <!--Column 1 Social media icons-->
+            <div class="col-12 col-md-4 p-2 d-md-flex align-items-center">
+                <div class="social-icons">
+                    <div class="footer-icons">
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-linkedin"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-youtube"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-facebook"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column 2- Copyright-->
+            <div
+                class="col-8 col-md-4 p-2 d-flex justify-content-end justify-content-md-center align-items-center"
+            >
+                <span class="fw-bold"> @2023 Created by Alex Scott </span>
+            </div>
+            <!--Column 3 - Privacy policy-->
+            <div
+                class="col-4 col-md-4 p-2 d-flex align-items-center justify-content-end"
+            >
+                <span class="" style="text-decoration: underline; color: blue">
+                    Privacy Policy
+                </span>
+            </div>
+        </div>
+
+        <!-------------------------Embed JS file--------------------------->
+        <script type="text/javascript" src="JS/javascript.js"></script>
+    </body>
+</html>
