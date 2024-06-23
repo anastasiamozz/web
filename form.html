@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD SECTION-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale: 1.0"
+        />
+        <title>FORMS</title>
+        <!--Embed Bootstrap framework here-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <!--Embed CSS-->
+        <link rel="stylesheet" href="style.css" />
+        <!--Font awesome-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        />
+    </head>
+
+    <!--BODY SECTION-->
+    <body>
+        <!--Navbar-->
+        <header>
+            <div class="header-box">
+                <div class="logo-box mx-1">
+                    <img
+                        style="height: 50px; width: 50px"
+                        src="Images/global.png "
+                        alt="Logo"
+                    />
+                </div>
+                <!--Header title-->
+                <div class="title-box">
+                    <span class="fw-bold">ITWD6.408</span>
+                </div>
+
+                <div class="nav-box">
+                    <div class="horizontal-nav">
+                        <a href="index.html">HOME</a>
+                        <a
+                            href="form.html"
+                            class="active"
+                            id="horizontal-active"
+                            >FORMS</a
+                        >
+                        <a href="xml-rss.html">XML/RSS</a>
+                        <a href="js-demo.html">JAVASCRIPT</a>
+                        <a href="my-research.html">RESEARCH</a>
+                    </div>
+                </div>
+
+                <div class="search-button">
+                    <span class="search-icon fs-3">🔍︎</span>
+                </div>
+
+                <div class="hamburger-menu">
+                    <span class="fs-1" onclick="toggleNav();">≡</span>
+                </div>
+            </div>
+
+            <!-----------------------Curtain Menu: collapsed at page load--------------------->
+            <nav id="curtain-nav">
+                <div class="curtain-nav-content">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="form.html" class="active">FORMS</a></li>
+                        <li><a href="xml-rss.html">XML/RSS</a></li>
+                        <li><a href="js-demo.html">JAVASCRIPT</a></li>
+                        <li><a href="my-research.html">RESEARCH</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!--button and forms-->
+            <div class="row bg-white m-0 p-0" style="min-height: 86vh">
+                <!--Have 2 column: One for 2 buttons and one for form-->
+
+                <!--Column 1-->
+                <div class="col-12 col-md-3">
+                    <!--Button-->
+                    <div class="row">
+                        <!--Button 1-->
+                        <button
+                            class="col-6 col-md-12 rounded-0 btn collapsed mb-1"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample1"
+                            href="#multiCollapseExample1"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample1"
+                            id="button1"
+                        >
+                            <b>HTML FORM</b>
+                        </button>
+                        <!--Button 2-->
+                        <button
+                            class="col-6 col-md-12 rounded-0 btn collapsed mb-1"
+                            role="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample2"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample2"
+                            id="button2"
+                        >
+                            <b>GOOGLE FORM</b>
+                        </button>
+                    </div>
+                </div>
+
+                <!--second column-->
+                <div class="col-12 col-md-9">
+                    <div class="row">
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample1"
+                            >
+                                <div
+                                    class="card card-body border-0 m-2"
+                                    style="background-color: #f0f0f0"
+                                >
+                                    <form
+                                        name="phone-survey"
+                                        action="https://danieldangs.com/itwd6408/handle_survey.php"
+                                        method="post"
+                                        enctype="text/plain"
+                                    >
+                                        <!-- First Name -->
+                                        <div class="row mb-3">
+                                            <label
+                                                for="firstName"
+                                                class="col-sm-2 col-form-label"
+                                                >First Name</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Enter First Name"
+                                                    minlength="1"
+                                                    maxlength="30"
+                                                    pattern="[a-zA-Z\s]+"
+                                                    required
+                                                />
+                                                <div class="invalid-feedback">
+                                                    Please enter a valid First
+                                                    Name.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Last Name -->
+                                        <div class="row mb-3">
+                                            <label
+                                                for="lastName"
+                                                class="col-sm-2 col-form-label"
+                                                >Last Name</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Enter Last Name"
+                                                    minlength="1"
+                                                    maxlength="30"
+                                                    pattern="[a-zA-Z\s]+"
+                                                    required
+                                                />
+                                                <div class="invalid-feedback">
+                                                    Please enter a valid Last
+                                                    Name.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Address label-->
+                                        <div class="lead fw-bold">Address</div>
+
+                                        <!-- Address Line 1 -->
+                                        <div class="row mb-3">
+                                            <label
+                                                for="address1"
+                                                class="col-sm-2 col-form-label"
+                                                >Address Line 1</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Enter Address Line 1"
+                                                    pattern="[A-Za-z0-9\s]+"
+                                                    minlength="8"
+                                                    maxlength="70"
+                                                    required
+                                                />
+                                                <div class="invalid-feedback">
+                                                    Please enter a valid
+                                                    Address.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Address Line 2 -->
+                                        <div class="row mb-3">
+                                            <label
+                                                for="address2"
+                                                class="col-sm-2 col-form-label"
+                                                >Address Line 2</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="address2"
+                                                    placeholder="Enter Address Line 2"
+                                                    pattern="[A-Za-z0-9\s]+"
+                                                    minlength="2"
+                                                    maxlength="70"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <!-- Town/City -->
+                                        <div class="row mb-3">
+                                            <label
+                                                for="townCity"
+                                                class="col-sm-2 col-form-label"
+                                                >Town/City</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Enter Town/City"
+                                                    minlength="1"
+                                                    maxlength="30"
+                                                    pattern="[a-zA-Z\s]+"
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <!-- Gender -->
+                                        <fieldset class="row mb-3">
+                                            <legend
+                                                class="col-form-label col-sm-2 pt-0"
+                                            >
+                                                Gender
+                                            </legend>
+                                            <div class="col-sm-10">
+                                                <div
+                                                    class="form-check form-check-inline"
+                                                >
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="gender"
+                                                        id="male"
+                                                        value="male"
+                                                        required
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="male"
+                                                        >Male</label
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="form-check form-check-inline"
+                                                >
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="gender"
+                                                        id="female"
+                                                        value="female"
+                                                        required
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="female"
+                                                        >Female</label
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="form-check form-check-inline"
+                                                >
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="gender"
+                                                        id="other"
+                                                        value="other"
+                                                        required
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="other"
+                                                        >Other</label
+                                                    >
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Mobile Phone type -->
+                                        <fieldset class="row mb-3">
+                                            <legend
+                                                class="col-form-label col-sm-2 pt-0"
+                                            >
+                                                Mobile Phone type
+                                            </legend>
+                                            <div class="col-sm-10">
+                                                <div
+                                                    class="form-check form-check-inline"
+                                                >
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        value=""
+                                                        id="iOS"
+                                                        name="phoneType"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="iOS"
+                                                        >iOS</label
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="form-check form-check-inline"
+                                                >
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        value=""
+                                                        id="android"
+                                                        name="phoneType"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="android"
+                                                        >Android</label
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="form-check form-check-inline"
+                                                >
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        value=""
+                                                        id="windows"
+                                                        name="phoneType"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="windows"
+                                                        >Windows</label
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="form-check form-check-inline"
+                                                >
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        value=""
+                                                        id="otherPhone"
+                                                        name="phoneType"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="otherPhone"
+                                                        >Other</label
+                                                    >
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Mobile Provider -->
+                                        <div class="row mb-3">
+                                            <label
+                                                for="mobileProvider"
+                                                class="col-sm-2 col-form-label"
+                                                >Mobile Provider</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <select
+                                                    class="form-control"
+                                                    id="mobileProvider"
+                                                >
+                                                    <option>None</option>
+                                                    <option>Spark</option>
+                                                    <option>Vodafone</option>
+                                                    <option>Now</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Do you use your phone for study? -->
+                                        <fieldset class="row mb-3">
+                                            <label
+                                                for="studyUsage"
+                                                class="col-sm-2 col-form-label"
+                                                >Do you use your phone for
+                                                study?</label
+                                            >
+                                            <div class="col-sm-10">
+                                                <textarea
+                                                    class="form-control"
+                                                    id="studyUsage"
+                                                    rows="3"
+                                                ></textarea>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Buttons -->
+                                        <fieldset class="row mb-3">
+                                            <div class="col-sm-10 offset-sm-2">
+                                                <button
+                                                    type="reset"
+                                                    class="btn btn-warning"
+                                                >
+                                                    Reset
+                                                </button>
+                                                <button
+                                                    type="submit"
+                                                    class="btn btn-primary"
+                                                >
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Google Form (embedded) -->
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample2"
+                            >
+                                <div class="card card-body border-0">
+                                    <iframe
+                                        width="auto"
+                                        height="2000px"
+                                        src="https://docs.google.com/forms/d/e/1FAIpQLSePgwD60ORL3L-3CSvnzxs5X5QtkYM8jsP0wzr2nxr55323YQ/viewform?embedded=true"
+                                        allowfullscreen
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--Footer-->
+        <div class="row m-0 p-0 footer">
+            <!--Column 1 Social media icons-->
+            <div class="col-12 col-md-4 p-2 d-md-flex align-items-center">
+                <div class="social-icons">
+                    <div class="footer-icons">
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-linkedin"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-youtube"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-facebook"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column 2- Copyright-->
+            <div
+                class="col-8 col-md-4 p-2 d-flex justify-content-end justify-content-md-center align-items-center"
+            >
+                <span class="fw-bold"> @2023 Created by Alex Scott </span>
+            </div>
+            <!--Column 3 - Privacy policy-->
+            <div
+                class="col-4 col-md-4 p-2 d-flex align-items-center justify-content-end"
+            >
+                <span class="" style="text-decoration: underline; color: blue">
+                    Privacy Policy
+                </span>
+            </div>
+        </div>
+
+        <!-- Include jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-------------------------Embed JS file--------------------------->
+        <script type="text/javascript" src="JS/javascript.js"></script>
+        <script>
+            $("#multiCollapseExample1").addClass("show");
+            $("#button1").addClass("selected");
+            // Show only one page when a button is clicked, hide the inactive pages
+            $(document).ready(function () {
+                // Add event listeners to the buttons
+                $("#button1").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample1").addClass("show"); // Show Form 1
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $("#button2").removeClass("selected"); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                $("#button2").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample2").addClass("show"); // Show Form 2
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $("#button1").removeClass("selected"); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                // Function to hide all screens
+                function hideAllScreens() {
+                    $(".multi-collapse").removeClass("show");
+                }
+            });
+        </script>
+    </body>
+</html>
