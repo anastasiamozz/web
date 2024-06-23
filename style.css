@@ -1,0 +1,568 @@
+/* Alex Scott 2022002779 */
+body {
+    background: #000000;
+}
+
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header style */
+
+.header-box {
+    /*flexbox container*/
+    display: flex;
+    flex-direction: row; /*Display horizontally*/
+    background-color: #a8cd81;
+    min-height: 7vh;
+    width: 100%;
+    align-items: center;
+}
+
+.logo-box {
+    flex: 0; /*wrap the content*/
+}
+
+.title-box {
+    flex: 0;
+
+    /*Centering both vertical and horizontal*/
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.nav-box {
+    flex: 4; /*horizontal nav on desktop*/
+
+    /*Centering the content both vertical and horizontal*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-menu {
+    display: flex;
+
+    text-align: end;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    cursor: pointer;
+    font-size: 4em;
+    color: black;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+
+    /*Centering both vertical and horizontal*/
+}
+
+.search-button {
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+}
+
+.horizontal-nav {
+    display: none; /*Hide on mobile devices*/
+}
+
+/*Curtain menu*/
+nav {
+    padding: 10px 10px 10px 10px; /*10px 10px 10px 10px*/
+    overflow: visible;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+nav ul li {
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    text-align: end;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li ul li {
+    background: #555;
+    display: block;
+    font-size: 1em;
+}
+
+nav ul li ul li a {
+    display: block;
+    text-align: left;
+}
+
+nav ul li.dropdown:hover ul {
+    display: block;
+}
+
+#curtain-nav {
+    display: block;
+    height: 285px;
+    width: 0; /* Hidden on page load */
+    padding: 0;
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    background-image: linear-gradient(white, #b4b4b4);
+    overflow-x: hidden;
+}
+
+.curtain-nav-content {
+    /*For curtain menu*/
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+
+    overflow: visible;
+}
+
+/*Set hover effect for items in the horizontal-menu*/
+.active {
+    background-image: linear-gradient(#f6f2b8, #fada74);
+    border: 1px solid #c5c78f;
+}
+
+li:hover:not(.active) {
+    background-color: gray;
+}
+
+/* Footer style */
+
+.footer {
+    background-color: #abcf82;
+    position: relative;
+    bottom: 0;
+    min-height: 7vh;
+    width: 100%;
+}
+
+/* Social icons colouring */
+
+.social-icons .fab {
+    font-size: 1.6em;
+}
+
+.social-icons .fab {
+    width: 35px;
+    height: 25px;
+
+    text-align: center;
+}
+
+.fa-facebook,
+.fa-facebook-square {
+    color: #3b5998;
+}
+.fa-twitter,
+.fa-twitter-square {
+    color: #00aced;
+}
+.fa-youtube,
+.fa-youtube-play,
+.fa-youtube-square {
+    color: #bb0000;
+}
+.fa-linkedin,
+.fa-linkedin-square {
+    color: #007bb6;
+}
+
+.fa-instagram {
+    color: transparent;
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    background: -webkit-radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Showcasae style */
+
+.showcase {
+    /* Half height */
+    height: 50vh;
+    position: relative;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("Images/javascript-code.jpg");
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    /* Full height */
+    height: 100%;
+    width: 100vw;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-text,
+.bg-image {
+    width: 100%;
+    position: absolute;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    max-width: 80vw;
+    padding: 20px;
+    text-align: center;
+    max-height: 320px;
+}
+
+/* Flip box style */
+
+.flip-box {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-box-myresearch {
+    background-color: transparent;
+    width: 600px;
+    height: 375px;
+    perspective: 1000px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border: solid 3px #bd9a26;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner-myresearch {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-myresearch:hover .flip-box-inner-myresearch {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Position the front and back side */
+.flip-box-front-myresearch,
+.flip-box-back-myresearch {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style  for the front side */
+.flip-box-front {
+    background-color: #b7e2e7;
+    color: blue;
+    border: 3px solid #40806b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    font-family: cursive;
+}
+
+.flipbox-img {
+    border-radius: 50%;
+    border: 5px solid black;
+    height: auto;
+    max-width: 170px;
+    margin: 5px;
+    mix-blend-mode: darken;
+}
+
+.flip-box-front-myresearch {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9e7ce;
+    padding-top: 10px; /* Add spacing from the top */
+    text-align: center; /* Center the text horizontally */
+    height: 100%; /* Ensure the flip box takes up the full height */
+}
+
+/* Style the heading container */
+.heading-container {
+    flex-grow: 1; /* Allow the heading container to expand to take available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the image container */
+.image-container {
+    flex-grow: 0; /* Prevent the image container from expanding */
+    max-height: 300px;
+    max-width: auto;
+}
+
+/* Style the image */
+.flip-box-front-myresearch img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Style the back side */
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the star ratings */
+.rating {
+    font-size: 24px;
+}
+
+.star {
+    color: gold;
+}
+
+.star-empty {
+    color: lightgray;
+}
+
+/* Style the back side */
+.flip-box-back-myresearch {
+    color: white;
+    transform: rotateY(180deg);
+    text-align: start;
+    background-color: chocolate;
+    overflow: auto; /* Add this line to enable scrolling */
+}
+
+/* slideshow style */
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Item shop style */
+
+.product-item-wrapper {
+    padding: 1em;
+    max-height: 700px;
+}
+
+.product-item-wrapper img {
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+    padding: 1em;
+}
+
+.itemImage {
+    height: 400px;
+    width: auto;
+    object-fit: contain;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100%; /* Make the container take full height */
+}
+
+/* Buttons */
+#button1,
+#button2,
+#button3,
+#button4 {
+    color: blue;
+    border: solid 1px black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: large;
+}
+
+.selected {
+    /* your custom styles for selected buttons, e.g.: */
+    background-color: #f3ca2a;
+}
+
+.btn:not([disabled]):not(.disabled).hover,
+.btn:not([disabled]):not(.disabled):hover {
+    /* Remove the color, background-color, and border-color properties */
+    background-color: #808080;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+    .flip-box-front {
+        flex-direction: row;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .flipbox-img {
+        max-width: 110px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .flip-box-front {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .footer-icons {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .footer-icons {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 941px) {
+    /*Make Horizontal nav visible*/
+    .horizontal-nav {
+        display: block;
+        background-color: #a8cd81;
+    }
+
+    /* Header nav bar style */
+    .horizontal-nav a {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 8px 8px;
+        text-decoration: none;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    .horizontal-nav a:hover:not(.active) {
+        background-color: gray;
+    }
+}
